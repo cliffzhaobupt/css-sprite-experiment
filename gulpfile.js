@@ -3,6 +3,7 @@ var gulp = require('gulp');
 var merge = require('merge-stream');
 var spritesmith = require('gulp.spritesmith');
 var sass = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
 
 var spritePath = './images/sprites';
 var imagePath = '../images/';
@@ -50,5 +51,6 @@ gulp.task('sprite-retina', function () {
 gulp.task('sass', function () {
   gulp.src('stylesheets/**/*.scss')
     .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer())
     .pipe(gulp.dest('stylesheets/'));
 });

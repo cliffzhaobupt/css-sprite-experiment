@@ -104,6 +104,9 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
 
 @include retina-sprites($retina-groups);
 */
+div {
+  margin: 20px auto; }
+
 .heart-1 {
   background-image: url(../images/hearts.png);
   background-position: 0px 0px;
@@ -135,3 +138,29 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
     .retina-question-4 {
       background-image: url(../images/questions@2x.png);
       background-size: 256px 256px; } }
+
+@-webkit-keyframes zoomInOut {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  60% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes zoomInOut {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  60% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+.heart-1 {
+  -webkit-animation: zoomInOut 1s ease-in infinite;
+          animation: zoomInOut 1s ease-in infinite; }

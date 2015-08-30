@@ -1,6 +1,10 @@
 @import 'sprites/hearts';
 @import 'sprites/questions';
 
+div {
+  margin: 20px auto;
+}
+
 .heart-1 {
   @include sprite($heart1);
 }
@@ -15,4 +19,20 @@
 
 .retina-question-4 {
   @include retina-sprite($question4-group);
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.heart-1 {
+  animation: zoomInOut 1s ease-in infinite;
 }
