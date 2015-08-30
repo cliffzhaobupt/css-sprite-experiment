@@ -1,0 +1,18 @@
+@import 'sprites/hearts';
+@import 'sprites/questions';
+
+.heart-1 {
+  @include sprite($heart1);
+}
+
+.retina-heart-3 {
+  @include retina-sprite($heart3-group);
+}
+
+.question-2 {
+  @include sprite($question2);
+}
+
+.retina-question-4 {
+  @include retina-sprite($question4-group);
+}

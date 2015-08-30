@@ -1,0 +1,223 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$heart1-name: 'heart1';
+$heart1-x: 0px;
+$heart1-y: 0px;
+$heart1-offset-x: 0px;
+$heart1-offset-y: 0px;
+$heart1-width: 128px;
+$heart1-height: 128px;
+$heart1-total-width: 256px;
+$heart1-total-height: 256px;
+$heart1-image: '../images/hearts.png';
+$heart1: (0px, 0px, 0px, 0px, 128px, 128px, 256px, 256px, '../images/hearts.png', 'heart1', );
+$heart2-name: 'heart2';
+$heart2-x: 128px;
+$heart2-y: 0px;
+$heart2-offset-x: -128px;
+$heart2-offset-y: 0px;
+$heart2-width: 128px;
+$heart2-height: 128px;
+$heart2-total-width: 256px;
+$heart2-total-height: 256px;
+$heart2-image: '../images/hearts.png';
+$heart2: (128px, 0px, -128px, 0px, 128px, 128px, 256px, 256px, '../images/hearts.png', 'heart2', );
+$heart3-name: 'heart3';
+$heart3-x: 0px;
+$heart3-y: 128px;
+$heart3-offset-x: 0px;
+$heart3-offset-y: -128px;
+$heart3-width: 128px;
+$heart3-height: 128px;
+$heart3-total-width: 256px;
+$heart3-total-height: 256px;
+$heart3-image: '../images/hearts.png';
+$heart3: (0px, 128px, 0px, -128px, 128px, 128px, 256px, 256px, '../images/hearts.png', 'heart3', );
+$heart4-name: 'heart4';
+$heart4-x: 128px;
+$heart4-y: 128px;
+$heart4-offset-x: -128px;
+$heart4-offset-y: -128px;
+$heart4-width: 128px;
+$heart4-height: 128px;
+$heart4-total-width: 256px;
+$heart4-total-height: 256px;
+$heart4-image: '../images/hearts.png';
+$heart4: (128px, 128px, -128px, -128px, 128px, 128px, 256px, 256px, '../images/hearts.png', 'heart4', );
+$heart1-2x-name: 'heart1@2x';
+$heart1-2x-x: 0px;
+$heart1-2x-y: 0px;
+$heart1-2x-offset-x: 0px;
+$heart1-2x-offset-y: 0px;
+$heart1-2x-width: 256px;
+$heart1-2x-height: 256px;
+$heart1-2x-total-width: 512px;
+$heart1-2x-total-height: 512px;
+$heart1-2x-image: '../images/hearts@2x.png';
+$heart1-2x: (0px, 0px, 0px, 0px, 256px, 256px, 512px, 512px, '../images/hearts@2x.png', 'heart1@2x', );
+$heart2-2x-name: 'heart2@2x';
+$heart2-2x-x: 256px;
+$heart2-2x-y: 0px;
+$heart2-2x-offset-x: -256px;
+$heart2-2x-offset-y: 0px;
+$heart2-2x-width: 256px;
+$heart2-2x-height: 256px;
+$heart2-2x-total-width: 512px;
+$heart2-2x-total-height: 512px;
+$heart2-2x-image: '../images/hearts@2x.png';
+$heart2-2x: (256px, 0px, -256px, 0px, 256px, 256px, 512px, 512px, '../images/hearts@2x.png', 'heart2@2x', );
+$heart3-2x-name: 'heart3@2x';
+$heart3-2x-x: 0px;
+$heart3-2x-y: 256px;
+$heart3-2x-offset-x: 0px;
+$heart3-2x-offset-y: -256px;
+$heart3-2x-width: 256px;
+$heart3-2x-height: 256px;
+$heart3-2x-total-width: 512px;
+$heart3-2x-total-height: 512px;
+$heart3-2x-image: '../images/hearts@2x.png';
+$heart3-2x: (0px, 256px, 0px, -256px, 256px, 256px, 512px, 512px, '../images/hearts@2x.png', 'heart3@2x', );
+$heart4-2x-name: 'heart4@2x';
+$heart4-2x-x: 256px;
+$heart4-2x-y: 256px;
+$heart4-2x-offset-x: -256px;
+$heart4-2x-offset-y: -256px;
+$heart4-2x-width: 256px;
+$heart4-2x-height: 256px;
+$heart4-2x-total-width: 512px;
+$heart4-2x-total-height: 512px;
+$heart4-2x-image: '../images/hearts@2x.png';
+$heart4-2x: (256px, 256px, -256px, -256px, 256px, 256px, 512px, 512px, '../images/hearts@2x.png', 'heart4@2x', );
+$spritesheet-width: 256px;
+$spritesheet-height: 256px;
+$spritesheet-image: '../images/hearts.png';
+$spritesheet-sprites: ($heart1, $heart2, $heart3, $heart4, );
+$spritesheet: (256px, 256px, '../images/hearts.png', $spritesheet-sprites, );
+$retina-spritesheet-width: 512px;
+$retina-spritesheet-height: 512px;
+$retina-spritesheet-image: '../images/hearts@2x.png';
+$retina-spritesheet-sprites: ($heart1-2x, $heart2-2x, $heart3-2x, $heart4-2x, );
+$retina-spritesheet: (512px, 512px, '../images/hearts@2x.png', $retina-spritesheet-sprites, );
+
+/*
+These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+
+The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
+*/
+$heart1-group-name: 'heart1';
+$heart1-group: ('heart1', $heart1, $heart1-2x, );
+$heart2-group-name: 'heart2';
+$heart2-group: ('heart2', $heart2, $heart2-2x, );
+$heart3-group-name: 'heart3';
+$heart3-group: ('heart3', $heart3, $heart3-2x, );
+$heart4-group-name: 'heart4';
+$heart4-group: ('heart4', $heart4, $heart4-2x, );
+$retina-groups: ($heart1-group, $heart2-group, $heart3-group, $heart4-group, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
+  It should be used with a "retina group" variable.
+
+The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+
+$icon-home-group: ('icon-home', $icon-home, $icon-home-2x, );
+
+.icon-home {
+  @include retina-sprite($icon-home-group);
+}
+*/
+@mixin sprite-background-size($sprite) {
+  $sprite-total-width: nth($sprite, 7);
+  $sprite-total-height: nth($sprite, 8);
+  background-size: $sprite-total-width $sprite-total-height;
+}
+
+@mixin retina-sprite($retina-group) {
+  $normal-sprite: nth($retina-group, 2);
+  $retina-sprite: nth($retina-group, 3);
+  @include sprite($normal-sprite);
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi) {
+    @include sprite-image($retina-sprite);
+    @include sprite-background-size($normal-sprite);
+  }
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
+
+/*
+The `retina-sprites` mixin generates a CSS rule and media query for retina groups
+  This yields the same output as CSS retina template but can be overridden in SCSS
+
+@include retina-sprites($retina-groups);
+*/
+@mixin retina-sprites($retina-groups) {
+  @each $retina-group in $retina-groups {
+    $sprite-name: nth($retina-group, 1);
+    .#{$sprite-name} {
+      @include retina-sprite($retina-group);
+    }
+  }
+}
