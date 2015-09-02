@@ -5,34 +5,56 @@ div {
   margin: 20px auto;
 }
 
-.heart-1 {
+.heart {
   @include sprite($heart1);
 }
 
-.retina-heart-3 {
-  @include retina-sprite($heart3-group);
+.retina-heart {
+  @include retina-sprite($heart1-group);
 }
 
-.question-2 {
-  @include sprite($question2);
+.question {
+  @include sprite($question1);
 }
 
-.retina-question-4 {
-  @include retina-sprite($question4-group);
+.retina-question {
+  @include retina-sprite($question1-group);
 }
 
-@keyframes zoomInOut {
-  0% {
-    transform: scale(1);
+@keyframes heartAnim {
+  25% {
+    @include sprite-position($heart2);
   }
-  60% {
-    transform: scale(1.2);
+  50% {
+    @include sprite-position($heart3);
+  }
+  75% {
+    @include sprite-position($heart4);
   }
   100% {
-    transform: scale(1);
+    @include sprite-position($heart1);
   }
 }
 
-.heart-1 {
-  animation: zoomInOut 1s ease-in infinite;
+.heart, .retina-heart {
+  animation: heartAnim 1s step-end infinite;
+}
+
+@keyframes questionAnim {
+  25% {
+    @include sprite-position($question2);
+  }
+  50% {
+    @include sprite-position($question3);
+  }
+  75% {
+    @include sprite-position($question4);
+  }
+  100% {
+    @include sprite-position($question1);
+  }
+}
+
+.question, .retina-question {
+  animation: questionAnim 1s step-end infinite;
 }

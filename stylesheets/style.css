@@ -107,60 +107,82 @@ The `retina-sprites` mixin generates a CSS rule and media query for retina group
 div {
   margin: 20px auto; }
 
-.heart-1 {
+.heart {
   background-image: url(../images/hearts.png);
   background-position: 0px 0px;
   width: 128px;
   height: 128px; }
 
-.retina-heart-3 {
+.retina-heart {
   background-image: url(../images/hearts.png);
-  background-position: 0px -128px;
+  background-position: 0px 0px;
   width: 128px;
   height: 128px; }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .retina-heart-3 {
+    .retina-heart {
       background-image: url(../images/hearts@2x.png);
       background-size: 256px 256px; } }
 
-.question-2 {
+.question {
   background-image: url(../images/questions.png);
-  background-position: -128px 0px;
+  background-position: 0px 0px;
   width: 128px;
   height: 128px; }
 
-.retina-question-4 {
+.retina-question {
   background-image: url(../images/questions.png);
-  background-position: -128px -128px;
+  background-position: 0px 0px;
   width: 128px;
   height: 128px; }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .retina-question-4 {
+    .retina-question {
       background-image: url(../images/questions@2x.png);
       background-size: 256px 256px; } }
 
-@-webkit-keyframes zoomInOut {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1); }
-  60% {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2); }
+@-webkit-keyframes heartAnim {
+  25% {
+    background-position: -128px 0px; }
+  50% {
+    background-position: 0px -128px; }
+  75% {
+    background-position: -128px -128px; }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1); } }
+    background-position: 0px 0px; } }
 
-@keyframes zoomInOut {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1); }
-  60% {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2); }
+@keyframes heartAnim {
+  25% {
+    background-position: -128px 0px; }
+  50% {
+    background-position: 0px -128px; }
+  75% {
+    background-position: -128px -128px; }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1); } }
+    background-position: 0px 0px; } }
 
-.heart-1 {
-  -webkit-animation: zoomInOut 1s ease-in infinite;
-          animation: zoomInOut 1s ease-in infinite; }
+.heart, .retina-heart {
+  -webkit-animation: heartAnim 1s step-end infinite;
+          animation: heartAnim 1s step-end infinite; }
+
+@-webkit-keyframes questionAnim {
+  25% {
+    background-position: -128px 0px; }
+  50% {
+    background-position: 0px -128px; }
+  75% {
+    background-position: -128px -128px; }
+  100% {
+    background-position: 0px 0px; } }
+
+@keyframes questionAnim {
+  25% {
+    background-position: -128px 0px; }
+  50% {
+    background-position: 0px -128px; }
+  75% {
+    background-position: -128px -128px; }
+  100% {
+    background-position: 0px 0px; } }
+
+.question, .retina-question {
+  -webkit-animation: questionAnim 1s step-end infinite;
+          animation: questionAnim 1s step-end infinite; }

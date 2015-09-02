@@ -20,7 +20,7 @@ gulp.task('sprite', function () {
         .pipe(gulp.dest('images/'));
      
       var cssStream = spriteData.css
-        .pipe(gulp.dest('stylesheets/'));
+        .pipe(gulp.dest('stylesheets/sprites/'));
 
       merge(imgStream, cssStream);
     });
